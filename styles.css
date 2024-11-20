@@ -20,12 +20,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
 }
 
 h2 {
   color: #333333;
   font-weight: 800;
+  font-size: 1.5rem;
   margin-top: auto;
 }
 
@@ -41,7 +42,7 @@ h2 span {
 
 .nav-center ul li {
   list-style: none;
-  margin-right: 5rem;
+  margin-right: 3rem;
   font-weight: 500;
 }
 
@@ -49,12 +50,14 @@ h2 span {
   text-decoration: none;
   display: inline-block;
   color: #333333;
-  font-size: 1.1rem;
-  margin: 0 1rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  transition: 0.3s ease;
 }
 
 .nav-center ul li a:hover {
   color: var(--primary);
+  transform: scale(1.05);
 }
 
 .nav-center ul li a::after {
@@ -83,12 +86,26 @@ h2 span {
   border: var(--primary) 2px solid;
   border-radius: 100px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s linear;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s ease;
   text-decoration: none;
 }
 
 .btn-primary:hover {
   background-color: var(--primary);
   color: var(--invert);
+  transform: scale(1.06);
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.hero-content {
+  width: 50%;
 }
