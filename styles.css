@@ -16,6 +16,12 @@ body {
 }
 
 /* navbar sections */
+header {
+  background-color: var(--invert);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  padding: auto;
+  height: 13vh;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -52,12 +58,12 @@ h2 span {
   color: #333333;
   font-size: 1rem;
   margin: 0 0.5rem;
-  transition: 0.3s ease;
+  transition: 0.2s linear;
 }
 
 .nav-center ul li a:hover {
   color: var(--primary);
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .nav-center ul li a::after {
@@ -77,6 +83,7 @@ h2 span {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .btn-primary {
@@ -88,7 +95,7 @@ h2 span {
   cursor: pointer;
   font-weight: 500;
   font-size: 1rem;
-  transition: 0.3s ease;
+  transition: 0.2s linear;
   text-decoration: none;
 }
 
@@ -103,9 +110,39 @@ h2 span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 2rem;
 }
 
 .hero-content {
-  width: 50%;
+  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.hero-img {
+  flex: 1;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.hero-img img {
+  height: 100%;
+}
+
+.hero-text {
+  margin-bottom: 8rem;
+  text-align: auto;
+}
+
+.hero-text h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.hero-text p {
+  color: #333333;
+  margin-bottom: 1.5rem;
 }
