@@ -21,12 +21,18 @@ header {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
   padding: auto;
   height: 13vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
+  z-index: 1001;
 }
 
 h2 {
@@ -145,4 +151,69 @@ h2 span {
 .hero-text p {
   color: #333333;
   margin-bottom: 1.5rem;
+}
+
+/* animasi untuk .hero-text h2 */
+/* Typewriter animation */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 32%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary);
+  }
+}
+
+.hero-text h2 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  overflow: hidden;
+  border-right: 0.2rem solid var(--primary);
+  white-space: nowrap;
+  animation: typewriter 1s steps(200, end) 1s 1 normal both,
+    blink-caret 0.8s step-end infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-connect {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.hero-connect a {
+  text-decoration: none;
+}
+.hero-connect a img {
+  color: #3450f3;
+  padding: auto;
+  width: 40px;
+  height: 40px;
+  margin-right: 2rem;
+  transition: 0.2s linear;
+}
+
+.hero-connect a img:hover {
+  transform: scale(1.1);
+}
+
+.hero-connect a img::after {
+  transform: scaleX(0);
+}
+
+.hero-connect a img:hover::after {
+  transform: scaleX(1.1);
 }
